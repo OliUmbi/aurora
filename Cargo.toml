@@ -1,0 +1,12 @@
+[package]
+name = "aurora"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+yew = "0.21.0"
+yew-router = "0.18.0"
+
+[[bin]]
+name = "aurora"
+required-features = ["yew/csr"]
