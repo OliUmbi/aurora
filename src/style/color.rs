@@ -1,5 +1,5 @@
-pub trait Color {
-    fn value(&self) -> String;
+pub trait Colorable {
+    fn color(&self) -> String;
 }
 
 pub struct Rgb {
@@ -9,8 +9,8 @@ pub struct Rgb {
     pub alpha: Option<f32>
 }
 
-impl Color for Rgb {
-    fn value(&self) -> String {
+impl Colorable for Rgb {
+    fn color(&self) -> String {
         let mut value = String::from("rgba(");
 
         value.push_str(&self.red.to_string());

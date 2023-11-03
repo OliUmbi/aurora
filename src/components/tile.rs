@@ -10,7 +10,7 @@ pub struct Props {
 pub fn Tile(props: &Props) -> Html {
 
     html! {
-        <div style={format!("background-color: {}", current_theme().background.value())}>
+        <div style={format!("background-color: {}", current_theme().background.color())}>
             {props.children.clone()}
         </div>
     }

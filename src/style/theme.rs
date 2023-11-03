@@ -1,7 +1,7 @@
-use crate::style::{Color, Rgb};
+use crate::style::{Colorable, Rgb};
 
 pub struct Theme<'a> {
-    pub background: &'a (dyn Color + 'static)
+    pub background: &'a (dyn Colorable + 'static)
 }
 
 pub const LIGHT: Theme = Theme {
