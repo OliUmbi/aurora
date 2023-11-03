@@ -9,7 +9,7 @@ use crate::components::layout::element::Element;
 #[function_component]
 pub fn Home() -> Html {
     html! {
-        <>
+        <Tile background={false} padding={4}>
             <Sequence direction={Direction::COLUMN} wrap={Wrap::NORMAL} gap={2}>
                 <Location horizontal={Horizontal::CENTER} vertical={Vertical::CENTER}>
                     <Element direction={Direction::ROW} alignment={Alignment::CENTER} gap={1}>
@@ -23,6 +23,6 @@ pub fn Home() -> Html {
                     </Element>
                 </Location>
             </Sequence>
-        </>
+        </Tile>
     }
 }

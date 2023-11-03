@@ -1,5 +1,6 @@
 *, :before, :after {
     box-sizing: border-box;
+    font-family: 'Geist', sans-serif;
 }
 
 html, body {
@@ -7,10 +8,62 @@ html, body {
     padding: 0;
 }
 
-html {
+html, body {
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-body {
-    min-height: 100%;
+@font-face {
+    font-family: 'Geist';
+    font-weight: 100;
+    src: url("../fonts/geist-100.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Geist';
+    font-weight: 200;
+    src: url("../fonts/geist-200.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Geist';
+    font-weight: 300;
+    src: url("../fonts/geist-300.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Geist';
+    font-weight: 400;
+    src: url("../fonts/geist-400.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Geist';
+    font-weight: 500;
+    src: url("../fonts/geist-500.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Geist';
+    font-weight: 600;
+    src: url("../fonts/geist-600.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Geist';
+    font-weight: 700;
+    src: url("../fonts/geist-700.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Geist';
+    font-weight: 800;
+    src: url("../fonts/geist-800.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Geist';
+    font-weight: 900;
+    src: url("../fonts/geist-900.woff2") format("woff2");
 }

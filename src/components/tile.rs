@@ -1,16 +1,34 @@
 use yew::prelude::*;
-use crate::style::{current_theme};
+use crate::style::*;
 
 #[derive(Properties, PartialEq)]
 pub struct Props {
-    pub children: Html
+    pub children: Html,
+    #[prop_or_default]
+    pub width: Option<u32>,
+    #[prop_or_default]
+    pub height: Option<u32>,
+    pub background: bool,
+    pub padding: u8
 }
 
 #[function_component]
 pub fn Tile(props: &Props) -> Html {
 
+    fn dimension(value: Option<u32>) -> String {
+        match value {
+            Some(value) => {value.size()}
+            None => {String::from("100%")}
+        }
+    }
+
     html! {
-        <div style={format!("background-color: {}", current_theme().background.color())}>
+        <div style={inline(&[
+            &style("width", dimension(props.width)),
+            &style("height", dimension(props.height)),
+            &style("background-color", if props.background {"var(--tile)"} else {"transparent"}),
+            &style("padding", props.padding.size())
+        ])}>
             {props.children.clone()}
         </div>
     }
