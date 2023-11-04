@@ -12,7 +12,6 @@ pub struct Props {
 
 #[function_component]
 pub fn Sequence(props: &Props) -> Html {
-
     html! {
         <div style={inline(&[
             &style("width", "100%"),

@@ -43,6 +43,12 @@ impl Sizable for u32 {
     }
 }
 
+impl Sizable for f32 {
+    fn size(&self) -> String {
+        self.to_string() + "rem"
+    }
+}
+
 pub fn inline(styles: &[&Style]) -> String {
     styles.iter()
         .map(|style| style.render())
