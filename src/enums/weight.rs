@@ -1,4 +1,4 @@
-use crate::style::{Style, Styleable};
+use crate::style::*;
 
 #[derive(PartialEq)]
 pub enum Weight {

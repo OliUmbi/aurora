@@ -1,5 +1,5 @@
 use yew::prelude::*;
-use crate::components::layout::*;
+use crate::enums::{Horizontal, Vertical};
 use crate::style::*;
 
 #[derive(Properties, PartialEq)]

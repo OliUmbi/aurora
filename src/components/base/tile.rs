@@ -26,7 +26,7 @@ pub fn Tile(props: &Props) -> Html {
         <div style={inline(&[
             &style("width", dimension(props.width)),
             &style("height", dimension(props.height)),
-            &style("background-color", if props.background {"var(--tile)"} else {"transparent"}),
+            &style("background-color", if props.background {current_theme().tile.color()} else {String::from("transparent")}),
             &style("padding", props.padding.size())
         ])}>
             {props.children.clone()}
