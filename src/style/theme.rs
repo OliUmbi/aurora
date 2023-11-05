@@ -2,6 +2,7 @@ use crate::style::{Colorable, Rgb};
 
 pub struct Theme<'a> {
     pub background: &'a (dyn Colorable + 'static),
+    pub foreground: &'a (dyn Colorable + 'static),
     pub tile: &'a (dyn Colorable + 'static),
 }
 
@@ -10,6 +11,12 @@ pub const LIGHT: Theme = Theme {
         red: 255,
         green: 255,
         blue: 255,
+        alpha: None,
+    },
+    foreground: &Rgb {
+        red: 10,
+        green: 10,
+        blue: 10,
         alpha: None,
     },
     tile: &Rgb {
@@ -25,6 +32,12 @@ pub const DARK: Theme = Theme {
         red: 10,
         green: 10,
         blue: 10,
+        alpha: None,
+    },
+    foreground: &Rgb {
+        red: 255,
+        green: 255,
+        blue: 255,
         alpha: None,
     },
     tile: &Rgb {

@@ -15,6 +15,7 @@ pub fn Typography(props: &Props) -> Html {
 
     html! {
         <p style={inline(&[
+            Style::from("color", current_theme().foreground.color()),
             Style::from("font-size", props.size.size()),
             Style::from("line-height", (props.size as f32 * 1.2).size()),
             Style::from("overflow", if props.ellipsis {"hidden"} else {"inherit"}),
