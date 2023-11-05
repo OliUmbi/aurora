@@ -36,5 +36,5 @@ pub const DARK: Theme = Theme {
 };
 
 pub fn current_theme() -> Theme<'static> {
-    LIGHT
+    DARK
 }

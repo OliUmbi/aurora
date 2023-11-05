@@ -14,12 +14,12 @@ pub struct Props {
 pub fn Sequence(props: &Props) -> Html {
     html! {
         <div style={inline(&[
-            &style("width", "100%"),
-            &style("height", "100%"),
-            &style("display", "flex"),
-            &props.direction.style(),
-            &props.wrap.style(),
-            &style("gap", props.gap.size())
+            Style::from("width", "100%"),
+            Style::from("height", "100%"),
+            Style::from("display", "flex"),
+            Style::from("gap", props.gap.size()),
+            props.direction.style(),
+            props.wrap.style()
         ])}>
             {props.children.clone()}
         </div>

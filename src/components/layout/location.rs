@@ -14,10 +14,10 @@ pub fn Location(props: &Props) -> Html {
 
     html! {
         <div style={inline(&[
-            &style("display", "flex"),
-            &style("flex-grow", "1"),
-            &props.horizontal.style(),
-            &props.vertical.style()
+            Style::from("display", "flex"),
+            Style::from("flex-grow", "1"),
+            props.horizontal.style(),
+            props.vertical.style()
         ])}>
             {props.children.clone()}
         </div>

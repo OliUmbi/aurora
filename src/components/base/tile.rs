@@ -24,10 +24,10 @@ pub fn Tile(props: &Props) -> Html {
 
     html! {
         <div style={inline(&[
-            &style("width", dimension(props.width)),
-            &style("height", dimension(props.height)),
-            &style("background-color", if props.background {current_theme().tile.color()} else {String::from("transparent")}),
-            &style("padding", props.padding.size())
+            Style::from("width", dimension(props.width)),
+            Style::from("height", dimension(props.height)),
+            Style::from("background-color", if props.background {current_theme().tile.color()} else {String::from("transparent")}),
+            Style::from("padding", props.padding.size())
         ])}>
             {props.children.clone()}
         </div>

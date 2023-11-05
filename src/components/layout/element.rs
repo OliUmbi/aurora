@@ -15,12 +15,12 @@ pub fn Element(props: &Props) -> Html {
 
     html! {
         <div style={inline(&[
-            &style("width", "fit-content"),
-            &style("height", "fit-content"),
-            &style("display", "flex"),
-            &props.direction.style(),
-            &props.alignment.style(),
-            &style("gap", props.gap.size())
+            Style::from("width", "fit-content"),
+            Style::from("height", "fit-content"),
+            Style::from("display", "flex"),
+            Style::from("gap", props.gap.size()),
+            props.direction.style(),
+            props.alignment.style(),
         ])}>
             {props.children.clone()}
         </div>

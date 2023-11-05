@@ -4,8 +4,8 @@ use yew::prelude::*;
 use yew_router::history::{AnyHistory, History, MemoryHistory};
 use yew_router::prelude::*;
 
-use crate::pages::home::Home;
-use crate::pages::not_found::NotFound;
+use crate::pages::*;
+use crate::components::outline::*;
 
 #[derive(Routable, PartialEq, Eq, Clone, Debug)]
 pub enum Route {
@@ -46,12 +46,20 @@ pub fn ServerApp(props: &ServerAppProps) -> Html {
 }
 
 fn switch(routes: Route) -> Html {
-    match routes {
-        Route::Home => {
-            html! { <Home /> }
+
+    html! {
+        <Page>
+        {
+               match routes {
+                    Route::Home => {
+                        html! { <Home /> }
+                    }
+                    Route::NotFound => {
+                        html! { <NotFound /> }
+                    }
+                }
         }
-        Route::NotFound => {
-            html! { <NotFound /> }
-        }
+        </Page>
     }
+
 }

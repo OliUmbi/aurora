@@ -15,12 +15,12 @@ pub fn Typography(props: &Props) -> Html {
 
     html! {
         <p style={inline(&[
-            &style("font-size", props.size.size()),
-            &style("line-height", (props.size as f32 * 1.2).size()),
-            &props.weight.style(),
-            &style("overflow", if props.ellipsis {"hidden"} else {"inherit"}),
-            &style("white-space", if props.ellipsis {"nowrap"} else {"inherit"}),
-            &style("text-overflow", if props.ellipsis {"ellipsis"} else {"inherit"}),
+            Style::from("font-size", props.size.size()),
+            Style::from("line-height", (props.size as f32 * 1.2).size()),
+            Style::from("overflow", if props.ellipsis {"hidden"} else {"inherit"}),
+            Style::from("white-space", if props.ellipsis {"nowrap"} else {"inherit"}),
+            Style::from("text-overflow", if props.ellipsis {"ellipsis"} else {"inherit"}),
+            props.weight.style(),
         ])}>
             {props.children.clone()}
         </p>

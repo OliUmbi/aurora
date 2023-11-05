@@ -1,7 +1,7 @@
-mod app;
-mod components;
-mod enums;
-mod pages;
-mod style;
+pub mod app;
+pub mod components;
+pub mod enums;
+pub mod pages;
+pub mod style;
 
 pub use app::*;
